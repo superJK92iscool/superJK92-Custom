@@ -67,13 +67,12 @@ index bf42969859545a8a520923ef1836ffa4a5cc24a0..388a3aecb02aebd8b2846bbf48f84cb3
      @Nonnull
      @Override
      public Component getVersionMessage(@Nonnull String serverVersion) {
--        String[] parts = serverVersion.substring("git-Paper-".length()).split("[-\\s]");
--        final Component updateMessage = getUpdateStatusMessage("PaperMC/Paper", GITHUB_BRANCH_NAME, parts[0]);
 +        String[] parts = serverVersion.substring("git-superJK92Custom-".length()).split("[-\\s]"); // Purpur // Firework // superJK92Custom
++        final Component updateMessage = getUpdateStatusMessage("PaperMC/Paper", GITHUB_BRANCH_NAME, parts[0]);
+
          final Component history = getHistory();
  
--        return history != null ? TextComponent.ofChildren(updateMessage, Component.newline(), history) : updateMessage;
-+        return history != null ? Component.join(net.kyori.adventure.text.JoinConfiguration.separator(Component.newline()), history, updateMessage) : updateMessage; // Purpur
+ +        return history != null ? Component.join(net.kyori.adventure.text.JoinConfiguration.separator(Component.newline()), history, updateMessage) : updateMessage; // Purpur
      }
  
      private static @Nullable String getMinecraftVersion() {
