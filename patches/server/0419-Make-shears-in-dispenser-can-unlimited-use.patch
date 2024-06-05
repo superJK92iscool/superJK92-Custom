@@ -1,0 +1,35 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: violetc <58360096+s-yh-china@users.noreply.github.com>
+Date: Sun, 27 Feb 2022 14:07:57 +0800
+Subject: [PATCH] Make shears in dispenser can unlimited use
+
+
+diff --git a/src/main/java/net/minecraft/core/dispenser/ShearsDispenseItemBehavior.java b/src/main/java/net/minecraft/core/dispenser/ShearsDispenseItemBehavior.java
+index 2366d411bf64f88c7296e888cd3bf584825ae4a9..7da29029038d5a007735dcb2be0114581d85d098 100644
+--- a/src/main/java/net/minecraft/core/dispenser/ShearsDispenseItemBehavior.java
++++ b/src/main/java/net/minecraft/core/dispenser/ShearsDispenseItemBehavior.java
+@@ -63,7 +63,7 @@ public class ShearsDispenseItemBehavior extends OptionalDispenseItemBehavior {
+             BlockPos blockposition = pointer.getPos().relative((Direction) pointer.getBlockState().getValue(DispenserBlock.FACING));
+ 
+             this.setSuccess(ShearsDispenseItemBehavior.tryShearBeehive((ServerLevel) worldserver, blockposition) || ShearsDispenseItemBehavior.tryShearLivingEntity((ServerLevel) worldserver, blockposition, bukkitBlock, craftItem)); // CraftBukkit
+-            if (this.isSuccess() && stack.hurt(1, worldserver.getRandom(), (ServerPlayer) null)) {
++            if (this.isSuccess() && stack.hurt(1, worldserver.getRandom(), (ServerPlayer) null) && !top.leavesmc.leaves.LeavesConfig.shearsInDispenserCanZeroAmount) { // Leaves - Make shears in dispenser can unlimited use
+                 stack.setCount(0);
+             }
+         }
+diff --git a/src/main/java/top/leavesmc/leaves/LeavesConfig.java b/src/main/java/top/leavesmc/leaves/LeavesConfig.java
+index 4d6d025c78086f186da710ae46f65eda5426464d..3a682ee9fced138f4759b829ba2dbeeb658f71d1 100644
+--- a/src/main/java/top/leavesmc/leaves/LeavesConfig.java
++++ b/src/main/java/top/leavesmc/leaves/LeavesConfig.java
+@@ -161,6 +161,11 @@ public final class LeavesConfig {
+         unableFakeplayerNames = getList("settings.fakeplayer.unable-fakeplayer-names", Arrays.asList("player-name"));
+     }
+ 
++    public static boolean shearsInDispenserCanZeroAmount = false;
++    private static void shearsInDispenserCanZeroAmount() {
++        shearsInDispenserCanZeroAmount = getBoolean("settings.shears-in-dispenser-can-zero-amount", shearsInDispenserCanZeroAmount);
++    }
++
+     public static final class WorldConfig {
+ 
+         public final String worldName;

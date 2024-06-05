@@ -33,7 +33,7 @@ index 9521971e9e597834e785b36d1657064dc1621b9b..4c56481e2b22714c9caf749c38b08247
              "Main-Class" to "org.bukkit.craftbukkit.Main",
              "Implementation-Title" to "CraftBukkit",
 -            "Implementation-Version" to "git-Pufferfish-$implementationVersion", // Pufferfish
-+            "Implementation-Version" to "git-Firework-$implementationVersion", // Pufferfish // Purpur // Firework
++            "Implementation-Version" to "git-superJK92Custom-$implementationVersion", // Pufferfish // Purpur // Firework // superJK92Custom
              "Implementation-Vendor" to date, // Paper
              "Specification-Title" to "Bukkit",
              "Specification-Version" to project.version,
@@ -69,8 +69,7 @@ index bf42969859545a8a520923ef1836ffa4a5cc24a0..388a3aecb02aebd8b2846bbf48f84cb3
      public Component getVersionMessage(@Nonnull String serverVersion) {
 -        String[] parts = serverVersion.substring("git-Paper-".length()).split("[-\\s]");
 -        final Component updateMessage = getUpdateStatusMessage("PaperMC/Paper", GITHUB_BRANCH_NAME, parts[0]);
-+        String[] parts = serverVersion.substring("git-Firework-".length()).split("[-\\s]"); // Purpur // Firework
-+        final Component updateMessage = getUpdateStatusMessage("squishycat92/Firework", getMinecraftVersion(), parts[0]); // Purpur // Firework
++        String[] parts = serverVersion.substring("git-superJK92Custom-".length()).split("[-\\s]"); // Purpur // Firework // superJK92Custom
          final Component history = getHistory();
  
 -        return history != null ? TextComponent.ofChildren(updateMessage, Component.newline(), history) : updateMessage;
@@ -83,7 +82,7 @@ index bf42969859545a8a520923ef1836ffa4a5cc24a0..388a3aecb02aebd8b2846bbf48f84cb3
                  mcVer = result.substring(0, result.length() - 2); // strip 'R' anchor and trailing '-'
              } else {
 -                org.bukkit.Bukkit.getLogger().warning("Unable to match version to pattern! Report to PaperMC!");
-+                org.bukkit.Bukkit.getLogger().warning("Unable to match version to pattern! Report to Firework!"); // Purpur // Firework
++                org.bukkit.Bukkit.getLogger().warning("Unable to match version to pattern! Report to superJK92!"); // Purpur // Firework
                  org.bukkit.Bukkit.getLogger().warning("Pattern: " + VER_PATTERN.toString());
                  org.bukkit.Bukkit.getLogger().warning("Version: " + org.bukkit.Bukkit.getBukkitVersion());
              }
@@ -186,7 +185,8 @@ index 371b0f95b23d67c9913875a3dd7888e722551f18..f932f834f14ae597f1643c032d6d6f1b
      @DontObfuscate
      public String getServerModName() {
 -        return "Pufferfish"; // Pufferfish - Pufferfish > // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
-+        return "Firework"; // Firework - Firework > // Purpur - Purpur > // Pufferfish - Pufferfish > // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
+-        return "Firework"; // Firework - Firework > // Purpur - Purpur > // Pufferfish - Pufferfish > // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
+         return "superJK92Custom"; // superJK92Custom - superJK92Custom > // Firework - Firework > // Purpur - Purpur > // Pufferfish - Pufferfish > // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
      }
  
      public SystemReport fillSystemReport(SystemReport details) {
@@ -231,7 +231,8 @@ index f4a82b1f2dc26f938d3dcb23ec32f135a1bfd163..4b15df1f9f04b98dedf9d87b1aa56ffb
  
  public final class CraftServer implements Server {
 -    private final String serverName = "Pufferfish"; // Paper // Pufferfish
-+    private final String serverName = "Firework"; // Paper // Pufferfish // Purpur // Firework
+-    private final String serverName = "Firework"; // Paper // Pufferfish // Purpur // Firework
++    private final String serverName = "superJK92Custom"; // Paper // Pufferfish // Purpur // Firework // superJK92Custom
      private final String serverVersion;
      private final String bukkitVersion = Versioning.getBukkitVersion();
      private final Logger logger = Logger.getLogger("Minecraft");

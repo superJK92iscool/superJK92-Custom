@@ -13,7 +13,7 @@ index ef8f2dd75b04534c454205cadf2bb5b0fbc5764b..c08f8b8a140fd2d746b054ef7ff2a689
          afkTabListSuffix = getString("settings.messages.afk-tab-list-suffix", afkTabListSuffix);
      }
  
-+    public static String serverModName = "Purpur";
++    public static String serverModName = "superJK92Custom";
 +    private static void serverModName() {
 +        serverModName = getString("settings.server-mod-name", serverModName);
 +    }

@@ -11,9 +11,9 @@ index df44790b1c342d0a6ff794bea86319fa7498cbae..645b6cc9dca6e754accbc1ae977db179
 @@ -64,7 +64,7 @@ public class Eula {
                  try {
                      Properties properties = new Properties();
-                     properties.setProperty("eula", "false");
+                     properties.setProperty("eula", "true");
 -                    properties.store(outputStream, "By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).\nYou also agree that tacos are tasty, and the best food in the world.");  // Paper - fix lag;
-+                    properties.store(outputStream, "By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).");  // Firework - Tacos don't fix lag!
++                    properties.store(outputStream, "By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).");  // superJK92Custom - Tacos don't fix lag!
                  } catch (Throwable var5) {
                      if (outputStream != null) {
                          try {
