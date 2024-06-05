@@ -1,6 +1,7 @@
-$superJK92-Custom
+# superJK92-Custom
 
 [![Build JAR](https://github.com/superJK92iscool/superJK92-Custom/actions/workflows/build.yml/badge.svg)](https://github.com/superJK92iscool/superJK92-Custom/actions/workflows/build.yml)
+
 <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/f/fd/Firework_Rocket_JE2_BE2.png" alt="firework_rocket" width="16"/> superJK92-Custom is a new Firework-based server software derived from Paper, Purpur, and several other forks. Firework un-patches many controversial changes introduced in upstream server softwares, such as duplication patches and changes to mob spawning behaviors. superJK92-Custom aims to restore vanilla-like behavior while maintaining the excellent performance gains introduced by Spigot and Paper. It also preserves the extreme customizability introduced with Purpur. We sincerely hope you enjoy playing on superJK92-Custom as much as we enjoy developing it!
 
 Firework is developed in collaboration with [nota-noob](https://github.com/nota-noob) for the Outcast SMP.
