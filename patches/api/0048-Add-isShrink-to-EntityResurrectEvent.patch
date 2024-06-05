@@ -13,36 +13,36 @@ index fa6b6c3b047edd1653f3c81027ec752821bcdb09..4e2e345bafa812c37a46b86e20fb2ce9
  
      private static final HandlerList handlers = new HandlerList();
 -    //
-+    
+
      private boolean cancelled;
-+    private boolean shrink;
+    private boolean shrink;
  
      public EntityResurrectEvent(@NotNull LivingEntity what) {
          super(what);
-+        this.shrink = true;
+        this.shrink = true;
     }
-+
+
     public EntityResurrectEvent(@NotNull LivingEntity what, boolean shrink) {
         super(what);
-+        this.shrink = shrink;
+        this.shrink = shrink;
     }
-+
-+    /**
-+     * Get is shrink item
-+     *
-+     * @return is shrink item
-+     */
+
+    /**
+     * Get is shrink item
+     *
+     * @return is shrink item
+     */
     public boolean isShrink() {
-+        return shrink;
+        return shrink;
     }
-+
-+    /**
-+     * Set is shrink item
-+     *
-+     * @param shrink is shrink item
-+     */
-git     public void setShrink(boolean shrink) {
-+        this.shrink = shrink;
+
+    /**
+     * Set is shrink item
+     *
+     * @param shrink is shrink item
+     */
+     public void setShrink(boolean shrink) {
+        this.shrink = shrink;
      }
 }
      @NotNull
