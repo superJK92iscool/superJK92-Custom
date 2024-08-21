@@ -34,7 +34,7 @@ index 4998aff0b7cb084dcda15c6a18bbe45e99b6000a..d23ecfabf6bf1e355fb2efe5abd80236
              "Main-Class" to "org.bukkit.craftbukkit.Main",
 -            "Implementation-Title" to "Paper",
 +            "Implementation-Title" to "superJK92-Custom", // superJK92-Custom
-             "Implementation-Version" to implementationVersion,
+           "Implementation-Version" to "git-superJK92-Custom-$implementationVersion", // Pufferfish // Purpur // Firework
 Firework
              "Implementation-Vendor" to date, // Paper
 -            "Specification-Title" to "Paper",
