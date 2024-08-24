@@ -3,8 +3,20 @@ From: William Blake Galbreath <Blake.Galbreath@GMail.com>
 Date: Sat, 21 Mar 2020 11:47:39 -0500
 Subject: [PATCH] Configurable server mod name
 
-Author:    Ted Hong <tedhong6@gmail.com>
 
+diff --git a/src/main/java/net/minecraft/server/MinecraftServer.java b/src/main/java/net/minecraft/server/MinecraftServer.java
+index 4a4e138b232dfa23bdab81fd93e3d580e6067f62..f9108dae8a563648d2f0d2c57be079c5108cec92 100644
+--- a/src/main/java/net/minecraft/server/MinecraftServer.java
++++ b/src/main/java/net/minecraft/server/MinecraftServer.java
+@@ -1699,7 +1699,7 @@ public abstract class MinecraftServer extends ReentrantBlockableEventLoop<TickTa
+ 
+     @DontObfuscate
+     public String getServerModName() {
+-        return "superJK92-Custom"; // Purpur - Purpur > // Pufferfish - Pufferfish > // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
++        return org.purpurmc.purpur.PurpurConfig.serverModName; // Purpur - Purpur > // Pufferfish - Pufferfish > // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
+     }
+ 
+     public SystemReport fillSystemReport(SystemReport details) {
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurConfig.java b/src/main/java/org/purpurmc/purpur/PurpurConfig.java
 index ef8f2dd75b04534c454205cadf2bb5b0fbc5764b..c08f8b8a140fd2d746b054ef7ff2a689a0cca6c2 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurConfig.java
@@ -13,7 +25,7 @@ index ef8f2dd75b04534c454205cadf2bb5b0fbc5764b..c08f8b8a140fd2d746b054ef7ff2a689
          afkTabListSuffix = getString("settings.messages.afk-tab-list-suffix", afkTabListSuffix);
      }
  
-+    public static String serverModName = "superJK92Custom";
++    public static String serverModName = "superJK92-Custom";
 +    private static void serverModName() {
 +        serverModName = getString("settings.server-mod-name", serverModName);
 +    }

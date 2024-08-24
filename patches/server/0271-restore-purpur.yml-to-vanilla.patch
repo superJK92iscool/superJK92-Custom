@@ -23,7 +23,7 @@ index c5b18b8d4ad74764fdeb5a1e21231e212e808b99..e933f75769c3d47f3ab43b43d30b842a
      }
  
 -    public static String serverModName = "Purpur";
-+    public static String serverModName = "Firework";
++    public static String serverModName = "superJK92-Custom";
      private static void serverModName() {
          serverModName = getString("settings.server-mod-name", serverModName);
      }
