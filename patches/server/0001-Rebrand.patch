@@ -33,7 +33,7 @@ index b04e9ab317fbce9c090b61076eb07c40f069dc59..50112767dff03bc3d9b3cc527e20f1b0
 +            "Implementation-Version" to "git-superJK92-Custom-$implementationVersion", // Pufferfish // Purpur
              "Implementation-Vendor" to date, // Paper
              "Specification-Title" to "superJK92-Custom",
-             "Specification-Version" to project.version,
+             "Specification-Version" to "1.18.2",
 +             "Specification-Vendor" to "superJK92-Custom Team",
 +             "Brand-Id" to "superjk92iscool:superJK92-Custom",
 +             "Brand-Name" to "superJK92-Custom",
