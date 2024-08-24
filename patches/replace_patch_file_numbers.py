@@ -32,7 +32,7 @@ def rename_patch_files(directory):
         print(f"Renamed: {old_filename} -> {new_filename}")
 
 def main():
-    directory = "api"  # Replace with the path to your patch directory
+    directory = "server"  # Replace with the path to your patch directory
     rename_patch_files(directory)
 
 if __name__ == "__main__":
