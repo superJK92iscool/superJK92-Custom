@@ -32,9 +32,6 @@ index fba5dbdb7bcbb55400ef18342c9b54612972a718..52a7692be6d7c77a09a6c1cc7a3be3a4
 @@ -33,8 +33,8 @@ public class PaperVersionFetcher implements VersionFetcher {
      @Nonnull
      @Override
-     public Component getVersionMessage(@Nonnull String serverVersion) {
--        String[] parts = serverVersion.substring("git-Purpur-".length()).split("[-\\s]"); // Purpur
--        final Component updateMessage = getUpdateStatusMessage("PurpurMC/Purpur", "ver/" + getMinecraftVersion(), parts[0]); // Purpur
 +        String[] parts = serverVersion.substring("git-superJK92-Custom-".length()).split("[-\\s]"); // Purpur // Tentacles
 +        final Component updateMessage = getUpdateStatusMessage("superJK92/superJK92-Custom", getMinecraftVersion(), parts[0]); // Purpur // superJK92-Custom
          final Component history = getHistory();
